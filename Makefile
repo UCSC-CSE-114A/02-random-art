@@ -1,4 +1,5 @@
 STACK=stack
+BUILD_OPTS=--ghc-options -O0 
 
 UNAME := $(shell uname)
 ifeq ($(UNAME), Linux)
@@ -13,10 +14,10 @@ COURSE=cs130s
 ASGN=02-random-art
 
 test: clean
-	$(STACK) test 
+	$(STACK) test $(BUILD_OPTS)
 
 bin:
-	$(STACK) build
+	$(STACK) build $(BUILD_OPTS)
 
 clean: 
 	$(STACK) clean
