@@ -88,7 +88,7 @@ for more information on the operation of the program.
 ## Problem #1: Tail Recursion
 
 We say that a function is *tail recursive*
-if every recursive call is a [tail call](http://en.wikipedia.org/wiki/Tail_call)
+if every recursive call is a [tail call](https://wiki.haskell.org/Tail_recursion)
 whose value is immediately
 returned by the procedure.
 
@@ -349,19 +349,19 @@ you should get the following behavior:
 
 ```haskell
 ghci> eval  0.5 (-0.5) sampleExpr0
-0.1
+0.0
 
 ghci> eval  0.3 0.3    sampleExpr0
-0.1
+0.8090169943749475
 
 ghci> eval  0.5 0.2    sampleExpr2
-0.1
+0.8090169943749475
 ```
 
 If you execute
 
 ```haskell
-ghci> emitGray "sample.png" 150 sampleExpr
+ghci> emitGray "sample.png" 150 sampleExpr3
 ```
 
 you should get a file `img/sample.png` in

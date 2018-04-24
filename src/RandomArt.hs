@@ -90,13 +90,13 @@ exprToString (Thresh e1 e2 e3 e4) = error "TBD:Thresh"
 --------------------------------------------------------------------------------
 
 -- >>> eval  0.5 (-0.5) sampleExpr0
--- 0.1
+-- 0.0
 --
 -- >>> eval  0.3 0.3    sampleExpr0
--- 0.1
+-- 0.8090169943749475
 --
 -- >>> eval  0.5 0.2    sampleExpr2
--- 0.1
+-- 0.8090169943749475
 
 eval :: Double -> Double -> Expr -> Double
 eval x y e = error "TBD:eval"
@@ -183,7 +183,7 @@ emitRandomGray size (depth, seed) = do
   let file = printf "gray_%d_%d_%d.png" size depth seed
   emitGray file size e
 
--- >>> emitGray "sample.png" 150 sampleExpr
+-- >>> emitGray "sample.png" 150 sampleExpr3
 emitGray :: FilePath -> Int -> Expr -> IO ()
 emitGray file size e = writePng ("img/" ++ file) (imageGray size e)
 
