@@ -1,5 +1,11 @@
+
+#####################################################################################################
+COURSE=cs130s
+ASGN=02
+NAME=random-art
 STACK=stack
 BUILD_OPTS=--ghc-options -O0 
+#####################################################################################################
 
 UNAME := $(shell uname)
 ifeq ($(UNAME), Linux)
@@ -9,9 +15,6 @@ ifeq ($(UNAME), Darwin)
   FORMAT=macho
 endif
 endif
-
-COURSE=cs130s
-ASGN=02-random-art
 
 test: clean
 	$(STACK) test $(BUILD_OPTS)
@@ -27,11 +30,12 @@ distclean: clean
 
 tags:
 	hasktags -x -c lib/
-
+  
 turnin: 
 	# rm -rf .stack-work
-	rm -rf $(ASGN).tgz
-	tar -zcvf ../$(ASGN).tgz --exclude .stack-work --exclude .git ../$(ASGN)
-	mv ../$(ASGN).tgz . 
-	turnin -c $(COURSE) -p $(ASGN) ./$(ASGN).tgz
+	rm -rf ./$(ASGN)-$(NAME).tgz
+	tar -zcvf ../$(ASGN)-$(NAME).tgz --exclude .stack-work --exclude .git ../$(ASGN)-$(NAME)
+	mv ../$(ASGN)-$(NAME).tgz . 
+	turnin -c $(COURSE) -p $(ASGN) ./$(ASGN)-$(NAME).tgz  
+  
 
