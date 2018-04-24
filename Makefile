@@ -32,5 +32,5 @@ turnin:
 	rm -rf $(ASGN).tgz
 	tar -zcvf ../$(ASGN).tgz --exclude .stack-work --exclude .git ../$(ASGN)
 	mv ../$(ASGN).tgz . 
-	turnin -c $(COURSE) ./$(ASGN).tgz
+	turnin -c $(COURSE) -p $(ASGN) ./$(ASGN).tgz
 
