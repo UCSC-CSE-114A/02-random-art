@@ -152,7 +152,7 @@ Without using any built-in functions, write a
 tail-recursive function:
 
 ```haskell
-wwhile :: (Int -> (Bool, Int)) -> Int -> Int
+wwhile :: (a -> (Bool, a)) -> a -> a
 ```
 
 such that `wwhile (f, x)` returns `x'` where there exist values
