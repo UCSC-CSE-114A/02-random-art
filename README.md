@@ -1,6 +1,6 @@
 # Assignment 2: Random Art (160 points)
 
-## Due by ~~Friday 4/27~~ Monday 4/30 23:59:59
+## Due by Monday 2/4 1pm
 
 
 ## Overview
@@ -437,8 +437,8 @@ tips below.
 - Play around to bias the generation towards more interesting operators.
 
 Save the parameters (i.e. the depth and the seeds)
-for your best three color images in the bodies of
-`c1`, `c2`, `c3` respectively, and best three gray
+for your favorite three color images in the bodies of
+`c1`, `c2`, `c3` respectively, and favorite three gray
 images in `g1`, `g2` , `g3`.
 
 ### (d) 20 points
@@ -447,15 +447,10 @@ Finally, add **two** new operators to the grammar, i.e. to the
 datatype, by introducing two new datatype constructors, and adding the
 corresponding cases to `exprToString`, `eval`, and `build`.
 The only requirements are that the operators must return
-values in the range `[-1.0,1.0]` if their arguments (ie `VarX` and `VarY`)
+values in the range `[-1.0,1.0]` if their arguments (i.e. `VarX` and `VarY`)
 are in that range, and that one of the operators take **three**
 arguments, i.e. one of the datatype constructors is of the form:
 `Ctor Expr Expr Expr`
 
 You can include images generated with these new operators
-when choosing your best images for part (c).
-
-### (e) Extra Credit: 15 points
-
-The creators of the **best five** images, will get extra credit.
-Be creative!
+when choosing your favorite images for part (c).
