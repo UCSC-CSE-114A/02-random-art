@@ -363,8 +363,7 @@ If you execute
 ```haskell
 ghci> emitGray "sample.png" 150 sampleExpr3
 ```
-Alternatively, you can also just run "make".
-
+(or just run `make` if your `ghci` is not working)
 you should get a file `img/sample.png` in
 your working directory. To receive full
 credit, this image must look like the
