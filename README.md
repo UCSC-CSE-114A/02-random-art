@@ -160,8 +160,8 @@ such that `wwhile (f, x)` returns `x'` where there exist values
 
 - `x` is equal to `v_0`
 - `x'` is equal to `v_n`
-- for each `i` between `0` and `n-2`, we have `f v_i` equals `(v_i+1, true)`
-- `f v_n-1` equals `(v_n, false)`.
+- for each `i` between `0` and `n-2`, we have `f v_i` equals `(true, v_i+1)`
+- `f v_n-1` equals `(false, v_n)`.
 
 Your function should be tail recursive.
 
