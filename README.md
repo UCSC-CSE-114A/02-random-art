@@ -1,6 +1,6 @@
 # Assignment 2: Random Art (160 points)
 
-## Due by Monday 2/4 1pm
+## Due by ~~Monday 2/4 1pm~~ Wednesday 2/6 1pm
 
 
 ## Overview
@@ -182,7 +182,7 @@ fixpointL :: (Int -> Int) -> Int -> [Int]
 ```
 
 The expression  `fixpointL f x0` should return the list  
-`[x_0, x_1, x_2, x_3, ... , x_n, x_n+1]` where
+`[x_0, x_1, x_2, x_3, ... , x_n]` where
 
 * `x = x_0`
 * `f x_0 = x_1, f x_1 = x_2, f x_2 = x_3, ... f x_n = x_{n+1}`
