@@ -107,7 +107,7 @@ wwhile f n = error "TBD:wwhile"
 
 {- | Fill in the implementation of `fixpointL f x0` which returns
 
-     the list [x_0, x_1, x_2, x_3, ... , x_n, x_n+1]
+     the list [x_0, x_1, x_2, x_3, ... , x_n]
 
      where
 
