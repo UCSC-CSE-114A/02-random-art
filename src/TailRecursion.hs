@@ -1,4 +1,4 @@
-{- | CSE 130: Programming Assignment 2
+{- | CMPS 112 : Programming Assignment 2
 
      Do not change the skeleton code!
 
