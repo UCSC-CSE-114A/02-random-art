@@ -1,6 +1,6 @@
 # Assignment 2: Random Art (160 points)
 
-## Due by 4/29 
+## Due by Monday 4/29 11:59pm
 
 
 ## Overview
