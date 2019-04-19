@@ -70,17 +70,13 @@ but you will not be graded on this.
 
 ## Submission Instructions
 
-To submit your code, just do:
-
-```bash
-$ make turnin
-```
-
-`turnin` will provide you with a confirmation of the
-submission process; make sure that the size of the file
-indicated by `turnin` matches the size of your file.
-See the ACS Web page on [turnin](http://acs.ucsd.edu/info/turnin.php)
-for more information on the operation of the program.
+To submit your code,
+1) Push your changes to GitLab first.
+2) Submit your commit SHA to canvas. 
+   You can find it by typing "git log" on the same folder
+   as your homework 
+   or, you can find it by clicking on commit tab in GitLab 
+   
 
 
 ## Problem #1: Tail Recursion
