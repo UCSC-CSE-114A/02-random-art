@@ -1,6 +1,6 @@
 # Assignment 2: Random Art (160 points)
 
-## Due by ~~Monday 2/4 1pm~~ Wednesday 2/6 1pm
+## Due by 4/29 
 
 
 ## Overview
@@ -32,8 +32,6 @@ error "TBD:..."
 with suitable Haskell implementations.
 
 ## Assignment Testing and Evaluation
-
-Your functions/programs **must** compile and run on `ieng6.ucsd.edu`.
 
 Most of the points, will be awarded automatically, by
 **evaluating your functions against a given test suite**.
