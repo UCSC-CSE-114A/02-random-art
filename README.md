@@ -101,9 +101,9 @@ such that
 assoc def key [(k1,v1), (k2,v2), (k3,v3);...])
 ```
 
-searches the list for the first i such that `ki` = `key`.
-If such a ki is found, then vi is returned.
-Otherwise, if no such ki exists in the list,
+searches the list for the first `i` such that `ki` = `key`.
+If such a `ki` is found, then `vi` is returned.
+Otherwise, if no such `ki` exists in the list,
 the default value `def` is returned.
 
 Once you have implemented the function, you
@@ -167,6 +167,12 @@ ghci> let f x = let xx = x * x * x in (xx < 100, xx) in wwhile f 2
 512
 ```
 
+You can think of this function as repeatedly performing a given operation `f` on a given value `x`
+until the conditional statement in `f`, whose value is the first item in the returned tuple, is `false`.
+The second item in the returned tuple is the input for the next recursive call.
+Thus, the final value will be `(false, <first value for which condition is no longer true>)`.
+
+
 ### (d) 20 points
 
 Fill in the implementation of the function
@@ -174,13 +180,13 @@ Fill in the implementation of the function
 ```haskell
 fixpointL :: (Int -> Int) -> Int -> [Int]
 ```
-
-The expression  `fixpointL f x0` should return the list  
+The fixpoint of a function `f` is a point at which `f(x) = x`.
+The expression  `fixpointL f x` should return the list  
 `[x_0, x_1, x_2, x_3, ... , x_n]` where
 
 * `x = x_0`
 * `f x_0 = x_1, f x_1 = x_2, f x_2 = x_3, ... f x_n = x_{n+1}`
-* `xn = x_{n+1}`
+* `x_n = x_{n+1}`
 
 When you are done, you should see the following behavior:
 
@@ -208,6 +214,9 @@ When you are done, you should see the following behavior:
 ```
 
 The last one is because `cos 0.739085` is approximately `0.739085`.
+
+It is possible for a function to have multiple fixpoints.
+This function should stop at the first one encountered.
 
 ### (e) 20 points
 
