@@ -145,12 +145,12 @@ tail-recursive function:
 wwhile :: (a -> (Bool, a)) -> a -> a
 ```
 
-such that `wwhile f x` returns a value `x'` obtained from the repeated application of an input function `f`.
+such that `wwhile f x` returns a value `x'` obtained from the repeated application of the input function `f`.
 
 `f` will always take in an input and return a tuple of a boolean and a result. `wwhile` takes in such a function `f` and applies it to the given `x` returning a boolean and a result. `wwhile` then keeps applying `f` to this new result and each result after that until the boolean returned is false. In which case, the result of the last call of `f` is returned.
 
 For example:
-Given a function `f x = (x<10, x+2)`, `wwhile f 6` will call `f 6` which will return `(True,8)`. Since the boolean of `f 6` is true, `f 8` will be called and will return `(False,10)`. Because the boolean from `f 8` is false, `wwhile f 6` will return `10`. 
+Given a function `f x = (x < 10, x + 2)`, `wwhile f 6` will call `f 6` which will return `(True,8)`. Since the boolean of `f 6` is true, `f 8` will be called and will return `(False,10)`. Because the boolean from `f 8` is false, `wwhile f 6` will return `10`. 
 
 Once you have implemented the function,
 you should get the following behavior:
