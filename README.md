@@ -145,20 +145,19 @@ tail-recursive function:
 wwhile :: (a -> (Bool, a)) -> a -> a
 ```
 
-such that `wwhile (f, x)` returns `x'` where there exist values
-`v_0`,...,`v_n` such that
+such that `wwhile f x` returns a value `x'` obtained from the repeated application of an input function `f`.
 
-- `x` is equal to `v_0`
-- `x'` is equal to `v_n`
-- for each `i` between `0` and `n-2`, we have `f v_i` equals `(true, v_i+1)`
-- `f v_n-1` equals `(false, v_n)`.
+`f` will always take in an input and return a tuple of a boolean and a result. `wwhile` takes in such a function `f` and applies it to the given `x` returning a boolean and a result. `wwhile` then keeps applying `f` to this new result and each result after that until the boolean returned is false. In which case, the result of the last call of `f` is returned.
 
-Your function should be tail recursive.
+For example:
+Given a function `f x = (x<10, x+2)`, `wwhile f 6` will call `f 6` which will return `(True,8)`. Since the boolean of `f 6` is true, `f 8` will be called and will return `(False,10)`. Because the boolean from `f 8` is false, `wwhile f 6` will return `10`. 
 
 Once you have implemented the function,
 you should get the following behavior:
 
 ```haskell
+ghci> let f x = (x < 10, x+2) in wwhile f 3
+11
 ghci> let f x = let xx = x * x * x in (xx < 100, xx) in wwhile f 2
 512
 ```

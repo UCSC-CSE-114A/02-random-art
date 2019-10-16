@@ -74,6 +74,8 @@ removeDuplicates ls = reverse (helper [] ls)
     ** your function should be tail recursive **
  -}
 
+-- >> let f x = (x < 10, x + 2) in wwhile f 3
+-- 11
 -- >>> let f x = let xx = x * x * x in (xx < 100, xx) in wwhile f 2
 -- 512
 
