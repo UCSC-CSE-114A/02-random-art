@@ -35,12 +35,11 @@ assoc :: Int -> String -> [(String, Int)] -> Int
 assoc def key kvs = error "TBD:assoc"
 
 --------------------------------------------------------------------------------
-{- | `removeDuplicates l`
+{- | `removeDuplicates ls`
 
-     returns the list of elements of `l` with duplicates
-     that is, second, third ... occurrences, removed,
-     and where the remaining elements appear in the
-     same order as in l.
+     returns the list of elements of `ls` with all duplicates removed.
+     The elements remaining in the list should have the same order as in `ls`. 
+     A duplicate would be any occurance of an element in `ls` beyond the first.
 
      ** your `helper` should be tail recursive **
 
@@ -53,7 +52,7 @@ assoc def key kvs = error "TBD:assoc"
 -- [1,6,2,4,12,13,9]
 
 removeDuplicates :: [Int] -> [Int]
-removeDuplicates l = reverse (helper [] l)
+removeDuplicates ls = reverse (helper [] ls)
   where
     helper :: [Int] -> [Int] -> [Int]
     helper seen []     = seen
@@ -79,7 +78,7 @@ removeDuplicates l = reverse (helper [] l)
 -- 512
 
 wwhile :: (a -> (Bool, a)) -> a -> a
-wwhile f n = error "TBD:wwhile"
+wwhile f x = error "TBD:wwhile"
 
 --------------------------------------------------------------------------------
 {- | The **fixpoint** of a function `f` starting at `x`

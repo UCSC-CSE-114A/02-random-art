@@ -126,11 +126,7 @@ Use the library function `elem` to **modify the skeleton** for
 removeDuplicates :: [Int] -> [Int]
 ```
 
-such that `removeDuplicates xs` returns the list
-of elements of `xs` with the duplicates, i.e.
-second, third, etc. occurrences, removed, and
-where the remaining elements appear in the same
-order as in `xs`.
+such that `removeDuplicates ls` returns the list of elements of `ls` with all duplicates removed. The elements remaining in the list should have the same order as in `ls`. A duplicate would be any occurance of an element in `ls` beyond the first.
 
 Once you have implemented the function, you
 should get the following behavior:
