@@ -71,9 +71,9 @@ and each result after that until the boolean returned is false.
 In which case, the result of the last call of `f` is returned.
 
 For example:
-Given a function `f x = (x < 10, x + 2)`, `wwhile f 6` will call `f 6` which will return `(True,8)`.
-Since the boolean of `f 6` is true, `f 8` will be called and will return `(False,10)`.
-Because the boolean from `f 8` is false, `wwhile f 6` will return `10`. 
+Given a function `f x = (x < 10, x + 2)`, `wwhile f 8` will call `f 8` which will return `(True,10)`.
+Since the boolean of `f 8` is true, `f 10` will be called and will return `(False,12)`.
+Because the boolean from `f 10` is false, `wwhile f 8` will return `12`.
 
 Once you have implemented the function,
 you should get the following behavior:
@@ -94,7 +94,7 @@ Thus, the final value will be `(false, <first value for which condition is no lo
  -}
 
 -- >> let f x = (x < 10, x + 2) in wwhile f 3
--- 11
+-- 13
 -- >>> let f x = let xx = x * x * x in (xx < 100, xx) in wwhile f 2
 -- 512
 

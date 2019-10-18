@@ -39,10 +39,15 @@ unit2 sc = testGroup "Unit 1"
       [1]
       "removeDups 1"
   , mkTest
+      (wwhile (\x -> (x < 10, x + 2)))
+      3
+      13
+      "wwhile 1"
+  , mkTest
       (wwhile (\x ->  let xx = x*x*x in (xx < 100, xx)))
       2
       512
-      "wwhile 1"
+      "wwhile 2"
   , mkTest
       (fixpointL collatz)
       1
