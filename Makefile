@@ -17,7 +17,8 @@ endif
 endif
 
 test: clean
-	$(STACK) test $(BUILD_OPTS)
+	bash tests/banned.sh tests/taboo || true
+	$(STACK) test $(BUILD_OPTS) || true
 
 bin:
 	$(STACK) build $(BUILD_OPTS)
