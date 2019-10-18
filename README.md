@@ -41,7 +41,7 @@ of tests which gives you a flavor of of these tests.
 When you run
 
 ```shell
-$ stack test
+$ make test
 ```
 
 Your last lines should have
@@ -70,14 +70,7 @@ but you will not be graded on this.
 
 ## Submission Instructions
 
-To submit your code,
-1) Push your changes to GitLab first.
-2) Submit your commit SHA to canvas. 
-   You can find it by typing "git log" on the same folder
-   as your homework 
-   or, you can find it by clicking on commit tab in GitLab 
-   
-
+We will grade your assignment based on the latest state of your repository prior to the due date. Make sure to push your changes to your repo!
 
 ## Problem #1: Tail Recursion
 
