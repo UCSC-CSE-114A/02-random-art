@@ -386,7 +386,7 @@ Change and extend the function to generate interesting expressions `Expr`.
   For example, in the above, at depth `0` we generate the expressions  
   `VarX` and `VarY` with equal probability.
 
-- `depth` is a a maximum nesting dept; a random expression of depth `d` is
+- `depth` is the maximum nesting depth; a random expression of depth `d` is
   built by randomly composing  sub-expressions of depth `d-1` and the
   only expressions of depth `0` are `VarX` and `VarY`.
 
@@ -442,6 +442,10 @@ values in the range `[-1.0,1.0]` if their arguments (i.e. `VarX` and `VarY`)
 are in that range, and that one of the operators take **three**
 arguments, i.e. one of the datatype constructors is of the form:
 `Ctor Expr Expr Expr`
+
+Make sure that the operators you add can accept all inputs in `[-1.0,1.0]`.
+This includes negative numbers and zero. Remember, operations like square root
+and division will fail for certain inputs.
 
 You can include images generated with these new operators
 when choosing your favorite images for part (c).
