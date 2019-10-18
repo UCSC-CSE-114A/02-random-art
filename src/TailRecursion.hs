@@ -62,14 +62,33 @@ removeDuplicates ls = reverse (helper [] ls)
         rest'          = error "TBD:helper:rest"
 
 --------------------------------------------------------------------------------
-{- | `wwhile f x` returns `x'` where there exist values
+{- | `wwhile f x` such that `wwhile f x` returns a value `x'` obtained from the repeated application of the input function `f`.
 
-      `v_0`,...,`v_n` such that
+`f` will always take in an input and return a tuple of a boolean and a result.
+`wwhile` takes in such a function `f` and applies it to the given `x` returning
+a boolean and a result. `wwhile` then keeps applying `f` to this new result
+and each result after that until the boolean returned is false.
+In which case, the result of the last call of `f` is returned.
 
-      - `x` is equal to `v_0`
-      - `x'` is equal to `v_n`
-      - for each `i` between `0` and `n-2`, we have `f v_i` equals `(true, v_i+1)`
-      - `f v_n-1` equals `(false, v_n)`.
+For example:
+Given a function `f x = (x < 10, x + 2)`, `wwhile f 6` will call `f 6` which will return `(True,8)`.
+Since the boolean of `f 6` is true, `f 8` will be called and will return `(False,10)`.
+Because the boolean from `f 8` is false, `wwhile f 6` will return `10`. 
+
+Once you have implemented the function,
+you should get the following behavior:
+
+```haskell
+ghci> let f x = (x < 10, x+2) in wwhile f 3
+11
+ghci> let f x = let xx = x * x * x in (xx < 100, xx) in wwhile f 2
+512
+```
+
+You can think of this function as repeatedly performing a given operation `f` on a given value `x`
+until the conditional statement in `f`, whose value is the first item in the returned tuple, is `false`.
+The second item in the returned tuple is the input for the next recursive call.
+Thus, the final value will be `(false, <first value for which condition is no longer true>)`.
 
     ** your function should be tail recursive **
  -}
@@ -84,6 +103,8 @@ wwhile f x = error "TBD:wwhile"
 
 --------------------------------------------------------------------------------
 {- | The **fixpoint** of a function `f` starting at `x`
+
+The fixpoint of a function `f` is a point at which `f(x) = x`.
 
 `fixpoint f x` returns the FIRST element of the sequence x0, x1, x2, ...
 
