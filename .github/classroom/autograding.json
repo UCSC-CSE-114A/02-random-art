@@ -1,0 +1,284 @@
+{
+  "tests": [
+    {
+      "name": "assoc 0",
+      "run": "stack test --allow-different-user --ta '--pattern \"assoc 0\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": XXX
+    },
+    {
+      "name": "assoc 1",
+      "run": "stack test --allow-different-user --ta '--pattern \"assoc 1\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": XXX
+    },
+    {
+      "name": "assoc 2",
+      "run": "stack test --allow-different-user --ta '--pattern \"assoc 2\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": XXX
+    },
+    {
+      "name": "assoc 3",
+      "run": "stack test --allow-different-user --ta '--pattern \"assoc 3\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": XXX
+    },
+    {
+      "name": "removeDups 0",
+      "run": "stack test --allow-different-user --ta '--pattern \"removeDups 0\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": XXX
+    },
+    {
+      "name": "removeDups 1",
+      "run": "stack test --allow-different-user --ta '--pattern \"removeDups 1\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": XXX
+    },
+    {
+      "name": "wwhile 1",
+      "run": "stack test --allow-different-user --ta '--pattern \"wwhile 1\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": XXX
+    },
+    {
+      "name": "wwhile 2",
+      "run": "stack test --allow-different-user --ta '--pattern \"wwhile 2\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": XXX
+    },
+    {
+      "name": "fixpointL 1",
+      "run": "stack test --allow-different-user --ta '--pattern \"fixpointL 1\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": XXX
+    },
+    {
+      "name": "fixpointL 2",
+      "run": "stack test --allow-different-user --ta '--pattern \"fixpointL 2\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": XXX
+    },
+    {
+      "name": "fixpointL 3",
+      "run": "stack test --allow-different-user --ta '--pattern \"fixpointL 3\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": XXX
+    },
+    {
+      "name": "fixpointL 4",
+      "run": "stack test --allow-different-user --ta '--pattern \"fixpointL 4\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": XXX
+    },
+    {
+      "name": "fixpointL 5",
+      "run": "stack test --allow-different-user --ta '--pattern \"fixpointL 5\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": XXX
+    },
+    {
+      "name": "fixpointL 6",
+      "run": "stack test --allow-different-user --ta '--pattern \"fixpointL 6\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": XXX
+    },
+    {
+      "name": "fixpointW 1",
+      "run": "stack test --allow-different-user --ta '--pattern \"fixpointW 1\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": XXX
+    },
+    {
+      "name": "fixpointW 2",
+      "run": "stack test --allow-different-user --ta '--pattern \"fixpointW 2\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": XXX
+    },
+    {
+      "name": "fixpointW 3",
+      "run": "stack test --allow-different-user --ta '--pattern \"fixpointW 3\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": XXX
+    },
+    {
+      "name": "fixpointW 4",
+      "run": "stack test --allow-different-user --ta '--pattern \"fixpointW 4\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": XXX
+    },
+    {
+      "name": "fixpointW 5",
+      "run": "stack test --allow-different-user --ta '--pattern \"fixpointW 5\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": XXX
+    },
+    {
+      "name": "fixpointL 6",
+      "run": "stack test --allow-different-user --ta '--pattern \"fixpointL 6\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": XXX
+    },
+    {
+      "name": "eval 1",
+      "run": "stack test --allow-different-user --ta '--pattern \"eval 1\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": XXX
+    },
+    {
+      "name": "eval 2",
+      "run": "stack test --allow-different-user --ta '--pattern \"eval 2\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": XXX
+    },
+    {
+      "name": "gray 1",
+      "run": "stack test --allow-different-user --ta '--pattern \"gray 1\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": XXX
+    },
+    {
+      "name": "gray 2",
+      "run": "stack test --allow-different-user --ta '--pattern \"gray 2\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": XXX
+    },
+    {
+      "name": "gray 3",
+      "run": "stack test --allow-different-user --ta '--pattern \"gray 3\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": XXX
+    },
+    {
+      "name": "color 1",
+      "run": "stack test --allow-different-user --ta '--pattern \"color 1\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": XXX
+    },
+    {
+      "name": "color 2",
+      "run": "stack test --allow-different-user --ta '--pattern \"color 2\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": XXX
+    },
+    {
+      "name": "color 3",
+      "run": "stack test --allow-different-user --ta '--pattern \"color 3\"'",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": XXX
+    },
+  ]
+}
