@@ -112,6 +112,26 @@ unit2 sc = testGroup "Unit 1"
       0
       739085
       "fixpointL 6"
+  , mkTest
+      exprToString
+      sampleExpr0
+      "sin(pi*((x+y)/2))" 
+      "exprToString 0"
+  , mkTest
+      exprToString
+      sampleExpr1
+      "(x<y?x:sin(pi*x)*cos(pi*((x+y)/2)))"
+      "exprToString 1"
+  , mkTest
+      exprToString
+      sampleExpr2
+      "(x<y?sin(pi*x):cos(pi*y))"
+      "exprToString 2"
+  , mkTest
+      exprToString
+      sampleExpr3
+      "cos(pi*sin(pi*cos(pi*((cos(pi*x)+cos(pi*cos(pi*((y*y+cos(pi*x))/2)))*cos(pi*sin(pi*cos(pi*y))*((sin(pi*x)+x*x)/2)))/2))*y))"
+      "exprToString 3"
   , mkTestIO
       (emitGray "sample.png" 150)
       sampleExpr3
