@@ -201,7 +201,7 @@
       "points": 3
     },
     {
-      "name": "exprToString 0"
+      "name": "exprToString 0",
       "run": "stack test --allow-different-user --ta '--pattern \"exprToString 0\"'",
       "setup": "",
       "input": "",
@@ -211,7 +211,7 @@
       "points": 3.75
     },
     {
-      "name": "exprToString 1"
+      "name": "exprToString 1",
       "run": "stack test --allow-different-user --ta '--pattern \"exprToString 1\"'",
       "setup": "",
       "input": "",
@@ -221,7 +221,7 @@
       "points": 3.75
     },
     {
-      "name": "exprToString 2"
+      "name": "exprToString 2",
       "run": "stack test --allow-different-user --ta '--pattern \"exprToString 2\"'",
       "setup": "",
       "input": "",
@@ -231,7 +231,7 @@
       "points": 3.75
     },
     {
-      "name": "exprToString 3"
+      "name": "exprToString 3",
       "run": "stack test --allow-different-user --ta '--pattern \"exprToString 3\"'",
       "setup": "",
       "input": "",
