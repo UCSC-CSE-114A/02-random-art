@@ -198,7 +198,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 5
     },
     {
       "name": "exprToString 0",
