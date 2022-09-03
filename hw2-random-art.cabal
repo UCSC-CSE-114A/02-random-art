@@ -19,6 +19,7 @@ Library
                        base,
                        random,
                        vector,
+                       clock,
                        JuicyPixels
 
   hs-source-dirs:      src
@@ -35,6 +36,7 @@ test-suite test
                     filepath,
                     process,
                     random,
+                    clock,
                     tasty,
                     tasty-hunit,
                     hw2-random-art

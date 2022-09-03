@@ -1,7 +1,7 @@
 # For more information, see: http://docs.haskellstack.org/en/stable/yaml_configuration.html
 
 # Specifies the GHC version and set of packages available (e.g., lts-3.5, nightly-2015-09-21, ghc-7.10.2)
-resolver: lts-17.7
+resolver: lts-19.20
 
 # Local packages, usually specified by relative directory name
 packages:
@@ -9,7 +9,7 @@ packages:
 
 # Packages to be pulled from upstream that are not in the resolver (e.g., acme-missiles-0.3)
 extra-deps: 
-- clock-0.7.2 
+# - clock-0.7.2 
 
 # Override default flag values for local packages and extra-deps
 flags: {}
