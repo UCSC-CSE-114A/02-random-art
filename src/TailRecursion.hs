@@ -177,7 +177,7 @@ collatz n
 fixpointW :: (Int -> Int) -> Int -> Int
 fixpointW f x = wwhile wwf x
  where
-   wwf        = error "TBD:fixpoint:wwf"
+   wwf        = \x -> (f x /= x, f x)
 
 -- >>> fixpointW collatz 1
 -- 1
