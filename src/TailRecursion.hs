@@ -32,7 +32,10 @@ import Prelude hiding (lookup)
 -- 0
 
 assoc :: Int -> String -> [(String, Int)] -> Int
-assoc def key kvs = error "TBD:assoc"
+assoc def key []=def
+assoc def key (p:ks)=
+  let (k,val) = p in
+    if key==k then val else assoc def key ks
 
 --------------------------------------------------------------------------------
 {- | `removeDuplicates ls`
@@ -58,8 +61,8 @@ removeDuplicates ls = reverse (helper [] ls)
     helper seen []     = seen
     helper seen (x:xs) = helper seen' rest'
       where
-        seen'          = error "TBD:helper:seen"
-        rest'          = error "TBD:helper:rest"
+        seen'          = if elem x seen then seen else x:seen
+        rest'          = xs
 
 --------------------------------------------------------------------------------
 {- | `wwhile f x` such that `wwhile f x` returns a value `x'` obtained from the repeated application of the input function `f`.
@@ -99,7 +102,11 @@ Thus, the final value will be `(false, <first value for which condition is no lo
 -- 512
 
 wwhile :: (a -> (Bool, a)) -> a -> a
-wwhile f x = error "TBD:wwhile"
+wwhile f x = 
+  let res=f x in
+    let (bool,x')=res in 
+      if bool then wwhile f x'
+      else x'
 
 --------------------------------------------------------------------------------
 {- | The **fixpoint** of a function `f` starting at `x`
@@ -141,7 +148,16 @@ The fixpoint of a function `f` is a point at which `f(x) = x`.
   -}
 
 fixpointL :: (Int -> Int) -> Int -> [Int]
-fixpointL f x = error "TBD:fixpointL"
+fixpointL f x = 
+  reverse(helper f x [x])
+  -- let x'= f x in if x'== x then x else fixpointL f x'
+  -- wwhile f (x,x') where
+  --   f (a,b) = (a/=b,x':[x])
+  where
+    helper f x xs = 
+      let x'= f x in if x'==x then xs
+      else helper f x' (x':xs)
+
 
 -- You should see the following behavior at the prompt:
 
@@ -177,7 +193,7 @@ collatz n
 fixpointW :: (Int -> Int) -> Int -> Int
 fixpointW f x = wwhile wwf x
  where
-   wwf        = error "TBD:fixpoint:wwf"
+   wwf x       = (f x /= x,f x)
 
 -- >>> fixpointW collatz 1
 -- 1

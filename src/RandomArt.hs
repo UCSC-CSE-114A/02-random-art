@@ -13,6 +13,7 @@ import           Control.Monad.ST
 import           Codec.Picture.Png
 import           Codec.Picture.Types
 import qualified Data.Vector.Storable as V
+import Data.Kind (FUN)
 
 --------------------------------------------------------------------------------
 -- | A Data Type for Grayscale Expressions -------------------------------------
@@ -25,6 +26,8 @@ data Expr
   | Average Expr Expr
   | Times   Expr Expr
   | Thresh  Expr Expr Expr Expr
+  | TriplePow Expr Expr Expr
+  | Div10 Expr
   deriving (Show)
 
 --------------------------------------------------------------------------------
@@ -78,13 +81,16 @@ sampleExpr3 =
 
 exprToString :: Expr -> String
 exprToString VarX                 = "x"
-exprToString VarY                 = error "TBD:VarY"
-exprToString (Sine e)             = error "TBD:Sin"
-exprToString (Cosine e)           = error "TBD:Cos"
-exprToString (Average e1 e2)      = error "TBD:Avg"
-exprToString (Times e1 e2)        = error "TBD:Times"
-exprToString (Thresh e1 e2 e3 e4) = error "TBD:Thresh"
+exprToString VarY                 = "y"
+exprToString (Sine e)             = "sin(pi*"++(exprToString e)++")"
+exprToString (Cosine e)           = "cos(pi*"++(exprToString e)++")"
+exprToString (Average e1 e2)      = "(("++(exprToString e1)++"+"++(exprToString e2)++")/2)"
+exprToString (Times e1 e2)        = ""++(exprToString e1)++"*"++(exprToString e2)++""
+exprToString (Thresh e1 e2 e3 e4) = "("++(exprToString e1)++"<"++(exprToString e2)++"?"++(exprToString e3)++":"++(exprToString e4)++")"
 
+-- part d
+exprToString (TriplePow e1 e2 e3)       = ""++(exprToString e1)++"^"++(exprToString e2)++"^"++(exprToString e3)++""
+exprToString (Div10 e1)          = ""++(exprToString e1)++"/10"
 --------------------------------------------------------------------------------
 -- | Evaluating Expressions at a given X, Y co-ordinate ------------------------
 --------------------------------------------------------------------------------
@@ -99,7 +105,17 @@ exprToString (Thresh e1 e2 e3 e4) = error "TBD:Thresh"
 -- 0.8090169943749475
 
 eval :: Double -> Double -> Expr -> Double
-eval x y e = error "TBD:eval"
+eval x y VarX = x
+eval x y VarY = y
+eval x y (Sine e) = sin(pi*eval x y e)
+eval x y (Cosine e) = cos(pi*eval x y e)
+eval x y (Average e1 e2) = ((eval x y e1)+(eval x y e2))/2
+eval x y (Times e1 e2) = (eval x y e1)*(eval x y e2)
+eval x y (Thresh e1 e2 e3 e4) = if ((eval x y e1)<(eval x y e2)) then (eval x y e3) else (eval x y e4)
+
+-- part d vvvvv
+eval x y (TriplePow e1 e2 e3)=(eval x y e1) ** (eval x y e2) ** (eval x y e3)
+eval x y (Div10 e1) = (eval x y e1) / 10
 
 evalFn :: Double -> Double -> Expr -> Double
 evalFn x y e = assert (-1.0 <= rv && rv <= 1.0) rv
@@ -138,7 +154,9 @@ build 0
   | otherwise = VarY
   where
     r         = rand 10
-build d       = error "TBD:build"
+build d       = if r <5 then Sine (build (d-1)) else Cosine(build (d-1))
+  where
+    r         = rand 10
 
 --------------------------------------------------------------------------------
 -- | Best Image "Seeds" --------------------------------------------------------
@@ -146,16 +164,16 @@ build d       = error "TBD:build"
 
 -- grayscale
 g1, g2, g3 :: (Int, Int)
-g1 = (error "TBD:depth1", error "TBD:seed1")
-g2 = (error "TBD:depth2", error "TBD:seed2")
-g3 = (error "TBD:depth3", error "TBD:seed3")
+g1 = (3, 12)
+g2 = (3, 12)
+g3 = (3, 12)
 
 
 -- grayscale
 c1, c2, c3 :: (Int, Int)
-c1 = (error "TBD:depth1", error "TBD:seed1")
-c2 = (error "TBD:depth2", error "TBD:seed2")
-c3 = (error "TBD:depth3", error "TBD:seed3")
+c1 = (3, 5)
+c2 = (5, 7)
+c3 = (7, 9)
 
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
