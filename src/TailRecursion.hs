@@ -80,7 +80,7 @@ you should get the following behavior:
 
 ```haskell
 ghci> let f x = (x < 10, x+2) in wwhile f 3
-11
+13
 ghci> let f x = let xx = x * x * x in (xx < 100, xx) in wwhile f 2
 512
 ```
@@ -92,11 +92,6 @@ Thus, the final value will be `(false, <first value for which condition is no lo
 
     ** your function should be tail recursive **
  -}
-
--- >> let f x = (x < 10, x + 2) in wwhile f 3
--- 11
--- >>> let f x = let xx = x * x * x in (xx < 100, xx) in wwhile f 2
--- 512
 
 wwhile :: (a -> (Bool, a)) -> a -> a
 wwhile f x = error "TBD:wwhile"
