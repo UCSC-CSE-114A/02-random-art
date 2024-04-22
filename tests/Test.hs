@@ -16,7 +16,7 @@ unit1 sc = testGroup "Unit 1"
   , mkTest
       (assoc 0 "pikachu")
       [("cormac", 85), ("owen",23), ("lindsey",44)]
-      85
+      0
       "assoc 1"
   , mkTest
       (assoc 0 "cormac")
