@@ -5,7 +5,7 @@
 
 module TailRecursion where
 
-import Prelude hiding (lookup, (++), reverse)
+import Prelude hiding (lookup,reverse)
 
 --------------------------------------------------------------------------------
 
