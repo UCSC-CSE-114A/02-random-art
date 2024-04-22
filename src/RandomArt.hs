@@ -15,7 +15,7 @@ import           Codec.Picture.Types
 import qualified Data.Vector.Storable as V
 
 --------------------------------------------------------------------------------
--- | A Data Type for Grayscale Expressions -------------------------------------
+-- | A data type for arithmetic expressions ------------------------------------
 --------------------------------------------------------------------------------
 data Expr
   = VarX
@@ -28,7 +28,7 @@ data Expr
   deriving (Show)
 
 --------------------------------------------------------------------------------
--- | Some sample Expressions ---------------------------------------------------
+-- | Some sample expressions ---------------------------------------------------
 --------------------------------------------------------------------------------
 
 sampleExpr0 :: Expr
@@ -63,7 +63,7 @@ sampleExpr3 =
         VarY))
 
 --------------------------------------------------------------------------------
--- | Printing Expressions as Strings -------------------------------------------
+-- | Pretty-printing arithmetic expressions ------------------------------------
 --------------------------------------------------------------------------------
 
 -- | `exprToString e` converts an Expr `e` into a `String` representation.
@@ -86,7 +86,7 @@ exprToString (Times e1 e2)        = error "TBD:Times"
 exprToString (Thresh e1 e2 e3 e4) = error "TBD:Thresh"
 
 --------------------------------------------------------------------------------
--- | Evaluating Expressions at a given X, Y co-ordinate ------------------------
+-- | Evaluating arithmetic expressions at a given (x, y)-coordinate ------------
 --------------------------------------------------------------------------------
 
 -- >>> eval  0.5 (-0.5) sampleExpr0
@@ -107,30 +107,12 @@ evalFn x y e = assert (-1.0 <= rv && rv <= 1.0) rv
     rv       = eval x y e
 
 --------------------------------------------------------------------------------
--- | Building Expressions ------------------------------------------------------
+-- | Synthesizing random arithmetic expressions --------------------------------
 --------------------------------------------------------------------------------
---
--- >>> buildS 0
--- VarX
---
--- >>> buildS 1
--- VarY
---
--- >>> buildS 2
--- Sine (Average VarY VarX)
 
-buildS :: Int -> Expr
-buildS 0 = VarX
-buildS 1 = VarY
-buildS n = Sine (Average (buildS (n-1)) (buildS (n-2)))
-
-
---------------------------------------------------------------------------------
--- | Building Random Expressions -----------------------------------------------
---------------------------------------------------------------------------------
---  `build d` returns an Expr of depth `d`.
---  A call to `rand n` will return a random number between (0..n-1)
---  change and extend the below to produce more interesting expressions
+--  `build d` returns an `Expr` with maximum nesting depth `d`.
+--  A call to `rand n` will return a random number in the range (0..n-1).
+--  Change and extend the `build` function to produce interesting expressions.
 
 build :: Int -> Expr
 build 0
@@ -173,7 +155,7 @@ c3 = (error "TBD:depth3", error "TBD:seed3")
 
 
 --------------------------------------------------------------------------------
--- | Generating GrayScale Images -----------------------------------------------
+-- | Generating Grayscale Images -----------------------------------------------
 --------------------------------------------------------------------------------
 -- >>> emitRandomGray 150 (3, 12)
 emitRandomGray :: Int -> (Int, Int) -> IO ()
@@ -217,7 +199,7 @@ imageColor :: Int -> Expr -> Expr -> Expr -> Image PixelRGB8
 imageColor n eR eG eB = mkImg n (pixelRGB8 n eR eG eB)
 
 --------------------------------------------------------------------------------
--- | Low level functions for creating pixels and images
+-- | Low-level functions for creating pixels and images
 --------------------------------------------------------------------------------
 writeImg :: (PngSavable a) => FilePath -> Image a -> IO ()
 writeImg file = writePng ("img/" ++ file)

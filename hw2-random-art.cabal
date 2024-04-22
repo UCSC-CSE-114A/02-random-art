@@ -1,10 +1,10 @@
 name:                hw2-random-art
 version:             0.1.0.0
-synopsis:            Starter code for cse130 homework/02-random-art
+synopsis:            Starter code for CSE114A homework 02-random-art
 license:             MIT
 license-file:        LICENSE
-author:              Ranjit Jhala
-maintainer:          jhala@cs.ucsd.edu
+author:              CSE114A Course Staff
+maintainer:          CSE114A Course Staff
 category:            Language
 build-type:          Simple
 cabal-version:       >=1.10
@@ -40,3 +40,4 @@ test-suite test
                     tasty,
                     tasty-hunit,
                     hw2-random-art
+  other-modules:    Common
