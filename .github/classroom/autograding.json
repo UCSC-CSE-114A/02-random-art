@@ -1,6 +1,16 @@
 {
   "tests": [
     {
+      "name": "INTEGRITY.md",
+      "run": "test -f ./INTEGRITY.md",
+      "setup": "",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 0
+    },
+    {
       "name": "assoc 0",
       "run": "stack test --allow-different-user --ta '--pattern \"assoc 0\"'",
       "setup": "",
@@ -41,8 +51,8 @@
       "points": 3.75
     },
     {
-      "name": "removeDups 0",
-      "run": "stack test --allow-different-user --ta '--pattern \"removeDups 0\"'",
+      "name": "listReverseTR 1",
+      "run": "stack test --allow-different-user --ta '--pattern \"listReverseTR 0\"'",
       "setup": "",
       "input": "",
       "output": "",
@@ -51,8 +61,8 @@
       "points": 7.5
     },
     {
-      "name": "removeDups 1",
-      "run": "stack test --allow-different-user --ta '--pattern \"removeDups 1\"'",
+      "name": "listReverseTR 2",
+      "run": "stack test --allow-different-user --ta '--pattern \"listReverseTR 1\"'",
       "setup": "",
       "input": "",
       "output": "",
@@ -61,8 +71,8 @@
       "points": 7.5
     },
     {
-      "name": "wwhile 1",
-      "run": "stack test --allow-different-user --ta '--pattern \"wwhile 1\"'",
+      "name": "listReverseTR 3",
+      "run": "stack test --allow-different-user --ta '--pattern \"listReverseTR 3\"'",
       "setup": "",
       "input": "",
       "output": "",
@@ -71,8 +81,8 @@
       "points": 10
     },
     {
-      "name": "wwhile 2",
-      "run": "stack test --allow-different-user --ta '--pattern \"wwhile 2\"'",
+      "name": "doubleEveryOtherTR 1",
+      "run": "stack test --allow-different-user --ta '--pattern \"doubleEveryOtherTR 1\"'",
       "setup": "",
       "input": "",
       "output": "",
@@ -81,8 +91,8 @@
       "points": 10
     },
     {
-      "name": "fixpointL 1",
-      "run": "stack test --allow-different-user --ta '--pattern \"fixpointL 1\"'",
+      "name": "doubleEveryOtherTR 2",
+      "run": "stack test --allow-different-user --ta '--pattern \"doubleEveryOtherTR 2\"'",
       "setup": "",
       "input": "",
       "output": "",
@@ -91,8 +101,8 @@
       "points": 3
     },
     {
-      "name": "fixpointL 2",
-      "run": "stack test --allow-different-user --ta '--pattern \"fixpointL 2\"'",
+      "name": "doubleEveryOtherTR 3",
+      "run": "stack test --allow-different-user --ta '--pattern \"doubleEveryOtherTR 3\"'",
       "setup": "",
       "input": "",
       "output": "",
@@ -101,8 +111,8 @@
       "points": 3
     },
     {
-      "name": "fixpointL 3",
-      "run": "stack test --allow-different-user --ta '--pattern \"fixpointL 3\"'",
+      "name": "sumListTR 1",
+      "run": "stack test --allow-different-user --ta '--pattern \"sumListTR 1\"'",
       "setup": "",
       "input": "",
       "output": "",
@@ -111,8 +121,8 @@
       "points": 3
     },
     {
-      "name": "fixpointL 4",
-      "run": "stack test --allow-different-user --ta '--pattern \"fixpointL 4\"'",
+      "name": "sumListTR 2",
+      "run": "stack test --allow-different-user --ta '--pattern \"sumListTR 2\"'",
       "setup": "",
       "input": "",
       "output": "",
@@ -121,8 +131,8 @@
       "points": 3
     },
     {
-      "name": "fixpointL 5",
-      "run": "stack test --allow-different-user --ta '--pattern \"fixpointL 5\"'",
+      "name": "sumListTR 3",
+      "run": "stack test --allow-different-user --ta '--pattern \"sumListTR 3\"'",
       "setup": "",
       "input": "",
       "output": "",
@@ -131,8 +141,8 @@
       "points": 3
     },
     {
-      "name": "fixpointL 6",
-      "run": "stack test --allow-different-user --ta '--pattern \"fixpointL 6\"'",
+      "name": "sumListTR 4",
+      "run": "stack test --allow-different-user --ta '--pattern \"sumListTR 4\"'",
       "setup": "",
       "input": "",
       "output": "",
@@ -141,64 +151,14 @@
       "points": 5
     },
     {
-      "name": "fixpointW 1",
-      "run": "stack test --allow-different-user --ta '--pattern \"fixpointW 1\"'",
+      "name": "sumListTR 5",
+      "run": "stack test --allow-different-user --ta '--pattern \"sumListTR 5\"'",
       "setup": "",
       "input": "",
       "output": "",
       "comparison": "included",
       "timeout": 10,
       "points": 3
-    },
-    {
-      "name": "fixpointW 2",
-      "run": "stack test --allow-different-user --ta '--pattern \"fixpointW 2\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 3
-    },
-    {
-      "name": "fixpointW 3",
-      "run": "stack test --allow-different-user --ta '--pattern \"fixpointW 3\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 3
-    },
-    {
-      "name": "fixpointW 4",
-      "run": "stack test --allow-different-user --ta '--pattern \"fixpointW 4\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 3
-    },
-    {
-      "name": "fixpointW 5",
-      "run": "stack test --allow-different-user --ta '--pattern \"fixpointW 5\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 3
-    },
-    {
-      "name": "fixpointL 6",
-      "run": "stack test --allow-different-user --ta '--pattern \"fixpointL 6\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 5
     },
     {
       "name": "exprToString 0",
