@@ -52,7 +52,7 @@
     },
     {
       "name": "listReverseTR 1",
-      "run": "stack test --allow-different-user --ta '--pattern \"listReverseTR 0\"'",
+      "run": "stack test --allow-different-user --ta '--pattern \"listReverseTR 1\"'",
       "setup": "",
       "input": "",
       "output": "",
@@ -62,7 +62,7 @@
     },
     {
       "name": "listReverseTR 2",
-      "run": "stack test --allow-different-user --ta '--pattern \"listReverseTR 1\"'",
+      "run": "stack test --allow-different-user --ta '--pattern \"listReverseTR 2\"'",
       "setup": "",
       "input": "",
       "output": "",
