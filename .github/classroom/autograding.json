@@ -58,7 +58,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 7.5
+      "points": 5
     },
     {
       "name": "listReverseTR 2",
@@ -68,7 +68,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 7.5
+      "points": 5
     },
     {
       "name": "listReverseTR 3",
@@ -78,7 +78,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 10
+      "points": 5
     },
     {
       "name": "doubleEveryOtherTR 1",
@@ -88,7 +88,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 10
+      "points": 5
     },
     {
       "name": "doubleEveryOtherTR 2",
@@ -98,7 +98,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 5
     },
     {
       "name": "doubleEveryOtherTR 3",
@@ -108,7 +108,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 5
     },
     {
       "name": "sumListTR 1",
@@ -118,7 +118,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 2
     },
     {
       "name": "sumListTR 2",
@@ -128,7 +128,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 2
     },
     {
       "name": "sumListTR 3",
@@ -138,7 +138,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 2
     },
     {
       "name": "sumListTR 4",
@@ -148,7 +148,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 5
+      "points": 2
     },
     {
       "name": "sumListTR 5",
@@ -158,7 +158,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 3
+      "points": 2
     },
     {
       "name": "exprToString 0",
@@ -228,7 +228,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 6
+      "points": 3
     },
     {
       "name": "gray 2",
@@ -238,7 +238,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 7
+      "points": 3
     },
     {
       "name": "gray 3",
@@ -248,7 +248,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 7
+      "points": 4
     },
     {
       "name": "color 1",
@@ -258,7 +258,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 6
+      "points": 3
     },
     {
       "name": "color 2",
@@ -268,7 +268,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 7
+      "points": 3
     },
     {
       "name": "color 3",
@@ -278,7 +278,7 @@
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 7
+      "points": 4
     }
   ]
 }
