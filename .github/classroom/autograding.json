@@ -1,284 +1,307 @@
 {
-  "tests": [
-    {
-      "name": "INTEGRITY.md",
-      "run": "test -f ./INTEGRITY.md",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 0
-    },
-    {
-      "name": "assoc 0",
-      "run": "stack test --allow-different-user --ta '--pattern \"assoc 0\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 3.75
-    },
-    {
-      "name": "assoc 1",
-      "run": "stack test --allow-different-user --ta '--pattern \"assoc 1\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 3.75
-    },
-    {
-      "name": "assoc 2",
-      "run": "stack test --allow-different-user --ta '--pattern \"assoc 2\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 3.75
-    },
-    {
-      "name": "assoc 3",
-      "run": "stack test --allow-different-user --ta '--pattern \"assoc 3\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 3.75
-    },
-    {
-      "name": "listReverseTR 1",
-      "run": "stack test --allow-different-user --ta '--pattern \"listReverseTR 1\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 5
-    },
-    {
-      "name": "listReverseTR 2",
-      "run": "stack test --allow-different-user --ta '--pattern \"listReverseTR 2\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 5
-    },
-    {
-      "name": "listReverseTR 3",
-      "run": "stack test --allow-different-user --ta '--pattern \"listReverseTR 3\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 5
-    },
-    {
-      "name": "doubleEveryOtherTR 1",
-      "run": "stack test --allow-different-user --ta '--pattern \"doubleEveryOtherTR 1\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 5
-    },
-    {
-      "name": "doubleEveryOtherTR 2",
-      "run": "stack test --allow-different-user --ta '--pattern \"doubleEveryOtherTR 2\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 5
-    },
-    {
-      "name": "doubleEveryOtherTR 3",
-      "run": "stack test --allow-different-user --ta '--pattern \"doubleEveryOtherTR 3\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 5
-    },
-    {
-      "name": "sumListTR 1",
-      "run": "stack test --allow-different-user --ta '--pattern \"sumListTR 1\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 2
-    },
-    {
-      "name": "sumListTR 2",
-      "run": "stack test --allow-different-user --ta '--pattern \"sumListTR 2\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 2
-    },
-    {
-      "name": "sumListTR 3",
-      "run": "stack test --allow-different-user --ta '--pattern \"sumListTR 3\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 2
-    },
-    {
-      "name": "sumListTR 4",
-      "run": "stack test --allow-different-user --ta '--pattern \"sumListTR 4\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 2
-    },
-    {
-      "name": "sumListTR 5",
-      "run": "stack test --allow-different-user --ta '--pattern \"sumListTR 5\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 2
-    },
-    {
-      "name": "exprToString 0",
-      "run": "stack test --allow-different-user --ta '--pattern \"exprToString 0\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 3.75
-    },
-    {
-      "name": "exprToString 1",
-      "run": "stack test --allow-different-user --ta '--pattern \"exprToString 1\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 3.75
-    },
-    {
-      "name": "exprToString 2",
-      "run": "stack test --allow-different-user --ta '--pattern \"exprToString 2\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 3.75
-    },
-    {
-      "name": "exprToString 3",
-      "run": "stack test --allow-different-user --ta '--pattern \"exprToString 3\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 3.75
-    },
-    {
-      "name": "eval 1",
-      "run": "stack test --allow-different-user --ta '--pattern \"eval 1\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 7.5
-    },
-    {
-      "name": "eval 2",
-      "run": "stack test --allow-different-user --ta '--pattern \"eval 2\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 7.5
-    },
-    {
-      "name": "gray 1",
-      "run": "stack test --allow-different-user --ta '--pattern \"gray 1\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 3
-    },
-    {
-      "name": "gray 2",
-      "run": "stack test --allow-different-user --ta '--pattern \"gray 2\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 3
-    },
-    {
-      "name": "gray 3",
-      "run": "stack test --allow-different-user --ta '--pattern \"gray 3\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 4
-    },
-    {
-      "name": "color 1",
-      "run": "stack test --allow-different-user --ta '--pattern \"color 1\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 3
-    },
-    {
-      "name": "color 2",
-      "run": "stack test --allow-different-user --ta '--pattern \"color 2\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 3
-    },
-    {
-      "name": "color 3",
-      "run": "stack test --allow-different-user --ta '--pattern \"color 3\"'",
-      "setup": "",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 4
-    }
-  ]
+    "tests": [
+        {
+            "name": "INTEGRITY.md",
+            "run": "test -f ./INTEGRITY.md",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 0,
+            "stop-on-fail": true
+        },
+        {
+            "name": "Taboo Word Check",
+            "run": "./tests/banned.sh tests/taboo",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 0,
+            "stop-on-fail": true
+        },
+        {
+            "name": "Build Check",
+            "run": "stack build --test --no-run-tests",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 60,
+            "points": 0,
+            "stop-on-fail": true
+        },
+        {
+            "name": "assoc 0",
+            "run": "stack test --allow-different-user --ta '--pattern \"assoc 0\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 3.75
+        },
+        {
+            "name": "assoc 1",
+            "run": "stack test --allow-different-user --ta '--pattern \"assoc 1\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 3.75
+        },
+        {
+            "name": "assoc 2",
+            "run": "stack test --allow-different-user --ta '--pattern \"assoc 2\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 3.75
+        },
+        {
+            "name": "assoc 3",
+            "run": "stack test --allow-different-user --ta '--pattern \"assoc 3\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 3.75
+        },
+        {
+            "name": "listReverseTR 1",
+            "run": "stack test --allow-different-user --ta '--pattern \"listReverseTR 1\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 5
+        },
+        {
+            "name": "listReverseTR 2",
+            "run": "stack test --allow-different-user --ta '--pattern \"listReverseTR 2\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 5
+        },
+        {
+            "name": "listReverseTR 3",
+            "run": "stack test --allow-different-user --ta '--pattern \"listReverseTR 3\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 5
+        },
+        {
+            "name": "doubleEveryOtherTR 1",
+            "run": "stack test --allow-different-user --ta '--pattern \"doubleEveryOtherTR 1\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 5
+        },
+        {
+            "name": "doubleEveryOtherTR 2",
+            "run": "stack test --allow-different-user --ta '--pattern \"doubleEveryOtherTR 2\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 5
+        },
+        {
+            "name": "doubleEveryOtherTR 3",
+            "run": "stack test --allow-different-user --ta '--pattern \"doubleEveryOtherTR 3\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 5
+        },
+        {
+            "name": "sumListTR 1",
+            "run": "stack test --allow-different-user --ta '--pattern \"sumListTR 1\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 2
+        },
+        {
+            "name": "sumListTR 2",
+            "run": "stack test --allow-different-user --ta '--pattern \"sumListTR 2\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 2
+        },
+        {
+            "name": "sumListTR 3",
+            "run": "stack test --allow-different-user --ta '--pattern \"sumListTR 3\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 2
+        },
+        {
+            "name": "sumListTR 4",
+            "run": "stack test --allow-different-user --ta '--pattern \"sumListTR 4\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 2
+        },
+        {
+            "name": "sumListTR 5",
+            "run": "stack test --allow-different-user --ta '--pattern \"sumListTR 5\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 2
+        },
+        {
+            "name": "exprToString 0",
+            "run": "stack test --allow-different-user --ta '--pattern \"exprToString 0\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 3.75
+        },
+        {
+            "name": "exprToString 1",
+            "run": "stack test --allow-different-user --ta '--pattern \"exprToString 1\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 3.75
+        },
+        {
+            "name": "exprToString 2",
+            "run": "stack test --allow-different-user --ta '--pattern \"exprToString 2\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 3.75
+        },
+        {
+            "name": "exprToString 3",
+            "run": "stack test --allow-different-user --ta '--pattern \"exprToString 3\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 3.75
+        },
+        {
+            "name": "eval 1",
+            "run": "stack test --allow-different-user --ta '--pattern \"eval 1\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 7.5
+        },
+        {
+            "name": "eval 2",
+            "run": "stack test --allow-different-user --ta '--pattern \"eval 2\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 7.5
+        },
+        {
+            "name": "gray 1",
+            "run": "stack test --allow-different-user --ta '--pattern \"gray 1\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 90,
+            "points": 3
+        },
+        {
+            "name": "gray 2",
+            "run": "stack test --allow-different-user --ta '--pattern \"gray 2\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 90,
+            "points": 3
+        },
+        {
+            "name": "gray 3",
+            "run": "stack test --allow-different-user --ta '--pattern \"gray 3\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 90,
+            "points": 4
+        },
+        {
+            "name": "color 1",
+            "run": "stack test --allow-different-user --ta '--pattern \"color 1\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 90,
+            "points": 3
+        },
+        {
+            "name": "color 2",
+            "run": "stack test --allow-different-user --ta '--pattern \"color 2\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 90,
+            "points": 3
+        },
+        {
+            "name": "color 3",
+            "run": "stack test --allow-different-user --ta '--pattern \"color 3\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 90,
+            "points": 4
+        }
+    ]
 }
