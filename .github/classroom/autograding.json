@@ -13,7 +13,7 @@
         },
         {
             "name": "Taboo Word Check",
-            "run": "./tests/banned.sh tests/taboo",
+            "run": "./tests/banned.sh tests/taboo.txt",
             "setup": "",
             "input": "",
             "output": "",
