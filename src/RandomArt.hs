@@ -110,7 +110,7 @@ evalFn x y e = assert (-1.0 <= rv && rv <= 1.0) rv
 -- | Synthesizing random arithmetic expressions --------------------------------
 --------------------------------------------------------------------------------
 
---  `build d` returns an `Expr` with maximum nesting depth `d`.
+--  `build d` returns an `Expr` with nesting depth `d`.
 --  A call to `rand n` will return a random number in the range (0..n-1).
 --  Change and extend the `build` function to produce interesting expressions.
 
