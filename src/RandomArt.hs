@@ -133,7 +133,7 @@ g2 = (error "TBD:depth2", error "TBD:seed2")
 g3 = (error "TBD:depth3", error "TBD:seed3")
 
 
--- grayscale
+-- color
 c1, c2, c3 :: (Int, Int)
 c1 = (error "TBD:depth1", error "TBD:seed1")
 c2 = (error "TBD:depth2", error "TBD:seed2")
