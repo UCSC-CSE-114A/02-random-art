@@ -224,6 +224,26 @@
             "points": 3.75
         },
         {
+            "name": "build depth check 1",
+            "run": "stack test --allow-different-user --ta '--pattern \"build depth check 1\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 2
+        },
+        {
+            "name": "build depth check 2",
+            "run": "stack test --allow-different-user --ta '--pattern \"build depth check 2\"'",
+            "setup": "",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": 2
+        },
+        {
             "name": "eval 1",
             "run": "stack test --allow-different-user --ta '--pattern \"eval 1\"'",
             "setup": "",
@@ -231,7 +251,7 @@
             "output": "",
             "comparison": "included",
             "timeout": 10,
-            "points": 7.5
+            "points": 5.5
         },
         {
             "name": "eval 2",
@@ -241,7 +261,7 @@
             "output": "",
             "comparison": "included",
             "timeout": 10,
-            "points": 7.5
+            "points": 5.5
         },
         {
             "name": "gray 1",

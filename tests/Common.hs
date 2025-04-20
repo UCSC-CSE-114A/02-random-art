@@ -10,7 +10,7 @@ import Test.Tasty.Runners
 import System.Exit
 import Control.Exception
 
-type Score = IORef (Int, Int)
+type Score = IORef (Double, Double)
 
 runTests :: [Score -> TestTree] -> IO ()
 runTests groups = do
@@ -32,12 +32,12 @@ tests x gs = testGroup "Tests" [ g x | g <- gs ]
 --------------------------------------------------------------------------------
 mkTest' :: (Show b, Eq b) => Score -> (a -> IO b) -> a -> b -> String -> TestTree
 --------------------------------------------------------------------------------
-mkTest' sc f x r name = scoreTest' sc (f, x, r, 1, name)
+mkTest' sc f x r name = scoreTest' sc f x r 1 name
 
 --------------------------------------------------------------------------------
-scoreTest' :: (Show b, Eq b) => Score -> (a -> IO b, a, b, Int, String) -> TestTree
+scoreTest' :: (Show b, Eq b) => Score -> (a -> IO b) -> a -> b -> Double -> String -> TestTree
 --------------------------------------------------------------------------------
-scoreTest' sc (f, x, expR, points, name) =
+scoreTest' sc f x expR points name =
   testCase name $ do
     updateTotal sc points
     actR <- f x
@@ -45,10 +45,10 @@ scoreTest' sc (f, x, expR, points, name) =
       then updateCurrent sc points
       else assertFailure "Wrong Result"
 
-updateTotal :: Score -> Int -> IO ()
+updateTotal :: Score -> Double -> IO ()
 updateTotal sc n = modifyIORef sc (\(x, y) -> (x, y + n))
 
-updateCurrent :: Score -> Int -> IO ()
+updateCurrent :: Score -> Double -> IO ()
 updateCurrent sc n = modifyIORef sc (\(x, y) -> (x + n, y))
 
 initScore :: IO Score
