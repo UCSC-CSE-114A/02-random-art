@@ -14,7 +14,7 @@ function main() {
     local taboo_words=$(paste -s -d '|' $taboo_file)
 
     echo 'Searching for banned keywords!'
-    output=$(grep -H -n '.*' src/* | sed 's:import.*$::g' | sed 's:--.*$::g' | grep --color -E "\b($taboo_words)\b")
+    output=$(grep -H -n '.*' src/* | sed 's:import.*$::g' | sed 's:--.*$::g' | sed 's:{-.*$::g' | grep --color -E "\b($taboo_words)\b")
 
     local exit_status=$?
     if [[ ${exit_status} -eq 0 ]]; then
